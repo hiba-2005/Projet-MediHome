@@ -1,0 +1,10 @@
+<!-- bg_staff_home_header.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+        android:startColor="#254F86"
+        android:endColor="#0F6178"
+        android:angle="135" />
+    <corners
+        android:bottomLeftRadius="30dp"
+        android:bottomRightRadius="30dp" />
+</shape>

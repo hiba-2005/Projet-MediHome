@@ -1,0 +1,6 @@
+<!-- bg_visit_message_card.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#062F46" />
+    <corners android:radius="20dp" />
+    <stroke android:width="1dp" android:color="#008A9A" />
+</shape>

@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEF3F8"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- HEADER -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:background="@drawable/bg_staff_visit_header"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <TextView
+                android:id="@+id/tvStaffInitials"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:background="@drawable/bg_staff_initials"
+                android:gravity="center"
+                android:text="SK"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="Mes Visites"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sélectionnez une visite pour voir les détails et rédiger le rapport"
+                android:textColor="#DCE8EF"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- STATS -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="96dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="-42dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="82dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_staff_stat_card"
+                android:elevation="8dp"
+                android:gravity="center"
+                android:text="2\nPLANIFIÉES"
+                android:textColor="#FF9800"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="82dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_staff_stat_card"
+                android:elevation="8dp"
+                android:gravity="center"
+                android:text="3\nTERMINÉES"
+                android:textColor="#00BFA6"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="82dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_staff_stat_card"
+                android:elevation="8dp"
+                android:gravity="center"
+                android:text="5\nTOTAL"
+                android:textColor="#1E88E5"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- LISTE -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="VISITES AFFECTÉES"
+                android:textColor="#355872"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/visitsListContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical" />
+
+            <LinearLayout
+                android:id="@+id/layoutEmptyVisits"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_staff_white_card"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="24dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Aucune visite affectée"
+                    android:textColor="#355872"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- DETAIL VISITE -->
+        <LinearLayout
+            android:id="@+id/layoutVisitDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DÉTAIL DE LA VISITE"
+                android:textColor="#355872"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_staff_white_card"
+                android:elevation="5dp"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvPatientAvatar"
+                        android:layout_width="58dp"
+                        android:layout_height="58dp"
+                        android:background="@drawable/bg_staff_patient_avatar"
+                        android:gravity="center"
+                        android:text="FB"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvPatientName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Fatima Bennani"
+                            android:textColor="#102A43"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvPatientId"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Patient · ID #2847"
+                            android:textColor="#7B8CA3"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvStaffVisitStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_staff_status_planned"
+                        android:paddingStart="12dp"
+                        android:paddingTop="6dp"
+                        android:paddingEnd="12dp"
+                        android:paddingBottom="6dp"
+                        android:text="Planifiée"
+                        android:textColor="#FF8A00"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- GRID -->
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:columnCount="2">
+
+                    <LinearLayout style="@style/StaffVisitInfoBox">
+                        <TextView style="@style/StaffVisitLabel" android:text="DATE" />
+                        <TextView android:id="@+id/tvStaffVisitDate" style="@style/StaffVisitValue" android:text="25 Avr 2026" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/StaffVisitInfoBox">
+                        <TextView style="@style/StaffVisitLabel" android:text="HEURE" />
+                        <TextView android:id="@+id/tvStaffVisitTime" style="@style/StaffVisitValue" android:text="17:30" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/StaffVisitInfoBox">
+                        <TextView style="@style/StaffVisitLabel" android:text="TYPE" />
+                        <TextView android:id="@+id/tvVisitType" style="@style/StaffVisitValue" android:text="Consultation" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/StaffVisitInfoBox">
+                        <TextView style="@style/StaffVisitLabel" android:text="STATUT" />
+                        <TextView android:id="@+id/tvVisitStatusText" style="@style/StaffVisitValue" android:text="Planifiée" />
+                    </LinearLayout>
+                </GridLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/bg_staff_info_long"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="14dp">
+
+                    <TextView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:text="📞"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:text="Téléphone"
+                            android:textColor="#8CA0B8"
+                            android:textSize="11sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/tvPatientPhone"
+                            android:text="0622 222 222"
+                            android:textColor="#102A43"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_staff_info_long"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="14dp">
+
+                    <TextView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:text="📍"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:text="Adresse"
+                            android:textColor="#8CA0B8"
+                            android:textSize="11sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/tvPatientAddress"
+                            android:text="Marrakech, Mhamid"
+                            android:textColor="#102A43"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnEnRoute"
+                        android:layout_width="0dp"
+                        android:layout_height="46dp"
+                        android:layout_marginEnd="6dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_staff_outline_button"
+                        android:text="En route"
+                        android:textAllCaps="false"
+                        android:textColor="#102A43"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/btnTerminee"
+                        android:layout_width="0dp"
+                        android:layout_height="46dp"
+                        android:layout_marginStart="6dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_staff_outline_button"
+                        android:text="Terminée"
+                        android:textAllCaps="false"
+                        android:textColor="#102A43"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- RAPPORT -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:text="RAPPORT DE VISITE"
+                android:textColor="#355872"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_staff_white_card"
+                android:elevation="5dp"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rédiger le rapport médical"
+                    android:textColor="#102A43"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvReportSubTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Renseignez les éléments pour le patient sélectionné"
+                    android:textColor="#8CA0B8"
+                    android:textSize="12sp" />
+
+                <TextView style="@style/StaffReportLabel" android:text="✦ OBSERVATIONS" />
+
+                <EditText
+                    android:id="@+id/etObservations"
+                    style="@style/StaffReportEditText"
+                    android:hint="Décrivez vos observations lors de la visite..." />
+
+                <TextView style="@style/StaffReportLabel" android:text="✎ SOINS EFFECTUÉS" />
+
+                <EditText
+                    android:id="@+id/etSoins"
+                    style="@style/StaffReportEditText"
+                    android:hint="Listez les soins et traitements administrés..." />
+
+                <TextView style="@style/StaffReportLabel" android:text="▣ RECOMMANDATIONS" />
+
+                <EditText
+                    android:id="@+id/etRecommandations"
+                    style="@style/StaffReportEditText"
+                    android:hint="Indiquez les recommandations pour le patient..." />
+
+                <Button
+                    android:id="@+id/btnSaveReport"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="14dp"
+                    android:background="@drawable/bg_staff_outline_button"
+                    android:text="Enregistrer le rapport"
+                    android:textAllCaps="false"
+                    android:textColor="#102A43"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

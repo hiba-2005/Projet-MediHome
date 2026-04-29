@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEF3F8"
+    android:fillViewport="true">
+    android:gravity="center_vertical"
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="28dp">
+
+        <!-- HEADER -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="@drawable/bg_staff_home_header"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bonjour 👋"
+                android:textColor="#EAF6FF"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvStaffFullName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Dr. Sara Karimi"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Accueil médical · MediHome"
+                android:textColor="#DCE8EF"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <!-- CARD PROFIL TOP -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginEnd="22dp"
+            android:layout_marginTop="-55dp"
+            android:background="@drawable/bg_staff_white_card"
+            android:elevation="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="18dp">
+
+            <TextView
+                android:id="@+id/tvStaffInitials"
+                android:layout_width="66dp"
+                android:layout_height="66dp"
+                android:background="@drawable/bg_staff_avatar"
+                android:gravity="center"
+                android:text="SK"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvStaffNameCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sara Karimi"
+                    android:textColor="#102A43"
+                    android:textSize="19sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvStaffEmailTop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="sara@gmail.com"
+                    android:textColor="#7B8CA3"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tvStaffSpecialityTop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/bg_staff_small_tag"
+                    android:paddingStart="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="5dp"
+                    android:text="🩺 Médecin généraliste"
+                    android:textColor="#2563EB"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- VUE RAPIDE -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vue rapide"
+                android:textColor="#102A43"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Résumé de votre activité"
+                android:textColor="#8CA0B8"
+                android:textSize="14sp" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:columnCount="2">
+
+                <LinearLayout style="@style/StaffHomeStatBox">
+                    <TextView style="@style/StaffHomeStatIcon" android:text="📋" />
+                    <TextView android:id="@+id/tvStatTotal" style="@style/StaffHomeStatNumber" android:text="5" />
+                    <TextView style="@style/StaffHomeStatLabel" android:text="Total visites" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/StaffHomeStatBox">
+                    <TextView style="@style/StaffHomeStatIcon" android:text="🗓️" />
+                    <TextView android:id="@+id/tvStatPlanned" style="@style/StaffHomeStatNumberOrange" android:text="2" />
+                    <TextView style="@style/StaffHomeStatLabel" android:text="Planifiées" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/StaffHomeStatBox">
+                    <TextView style="@style/StaffHomeStatIcon" android:text="🚑" />
+                    <TextView android:id="@+id/tvStatRoute" style="@style/StaffHomeStatNumber" android:text="0" />
+                    <TextView style="@style/StaffHomeStatLabel" android:text="En route" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/StaffHomeStatBox">
+                    <TextView style="@style/StaffHomeStatIcon" android:text="✅" />
+                    <TextView android:id="@+id/tvStatDone" style="@style/StaffHomeStatNumberGreen" android:text="3" />
+                    <TextView style="@style/StaffHomeStatLabel" android:text="Terminées" />
+                </LinearLayout>
+
+            </GridLayout>
+        </LinearLayout>
+
+        <!-- AGENDA -->
+        <!-- AGENDA -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Agenda du jour"
+                        android:textColor="#102A43"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="25 Avril 2026"
+                        android:textColor="#8CA0B8"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tout voir"
+                    android:textColor="#2563EB"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutTodayAgenda"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_staff_white_card"
+                android:elevation="5dp"
+                android:orientation="vertical"
+                android:padding="16dp" />
+
+        </LinearLayout>
+
+        <!-- ACTIONS RAPIDES -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="26dp"
+            android:text="Actions rapides"
+            android:textColor="#102A43"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/btnGoVisits"
+                style="@style/StaffHomeActionBox"
+                android:text="📋\nMes visites" />
+
+            <TextView
+                android:id="@+id/btnGoReport"
+                style="@style/StaffHomeActionBox"
+                android:text="📝\nRapport" />
+
+            <TextView
+                android:id="@+id/btnGoProfile"
+                style="@style/StaffHomeActionBox"
+                android:text="👤\nProfil" />
+        </LinearLayout>
+
+        <!-- MON PROFIL -->
+    <!-- MON PROFIL -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="26dp"
+        android:text="Mon profil"
+        android:textColor="#102A43"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/bg_staff_white_card"
+        android:elevation="5dp"
+        android:orientation="vertical"
+        android:padding="18dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Informations professionnelles"
+            android:textColor="#102A43"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Modifiez vos coordonnées médicales"
+            android:textColor="#8CA0B8"
+            android:textSize="11sp" />
+
+        <!-- Prénom -->
+        <LinearLayout style="@style/StaffProfileItem">
+            <TextView style="@style/StaffProfileIcon" android:text="👤" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView style="@style/StaffProfileLabel" android:text="Prénom" />
+
+                <EditText
+                    android:id="@+id/etStaffPrenom"
+                    style="@style/StaffProfileEditText"
+                    android:hint="Prénom" />
+            </LinearLayout>
+
+            <TextView style="@style/StaffProfileArrow" android:text="›" />
+        </LinearLayout>
+
+        <!-- Nom -->
+        <LinearLayout style="@style/StaffProfileItem">
+            <TextView style="@style/StaffProfileIcon" android:text="🪪" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView style="@style/StaffProfileLabel" android:text="Nom" />
+
+                <EditText
+                    android:id="@+id/etStaffNom"
+                    style="@style/StaffProfileEditText"
+                    android:hint="Nom" />
+            </LinearLayout>
+
+            <TextView style="@style/StaffProfileArrow" android:text="›" />
+        </LinearLayout>
+
+        <!-- Email -->
+        <LinearLayout style="@style/StaffProfileItem">
+            <TextView style="@style/StaffProfileIcon" android:text="✉️" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView style="@style/StaffProfileLabel" android:text="Email" />
+
+                <EditText
+                    android:id="@+id/etStaffEmail"
+                    style="@style/StaffProfileEditText"
+                    android:hint="Email" />
+            </LinearLayout>
+
+            <TextView style="@style/StaffProfileArrow" android:text="›" />
+        </LinearLayout>
+
+        <!-- Téléphone -->
+        <LinearLayout style="@style/StaffProfileItem">
+            <TextView style="@style/StaffProfileIcon" android:text="📞" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView style="@style/StaffProfileLabel" android:text="Téléphone" />
+
+                <EditText
+                    android:id="@+id/etStaffTelephone"
+                    style="@style/StaffProfileEditText"
+                    android:hint="Téléphone" />
+            </LinearLayout>
+
+            <TextView style="@style/StaffProfileArrow" android:text="›" />
+        </LinearLayout>
+
+        <!-- Spécialité -->
+        <LinearLayout style="@style/StaffProfileItem">
+            <TextView style="@style/StaffProfileIcon" android:text="🩺" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView style="@style/StaffProfileLabel" android:text="Spécialité" />
+
+                <EditText
+                    android:id="@+id/etStaffSpecialite"
+                    style="@style/StaffProfileEditText"
+                    android:hint="Spécialité" />
+            </LinearLayout>
+
+            <TextView style="@style/StaffProfileArrow" android:text="›" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnSaveStaffProfile"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/bg_staff_main_button"
+            android:text="Enregistrer"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnLogoutStaff"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_staff_logout_button"
+            android:text="Se déconnecter"
+            android:textAllCaps="false"
+            android:textColor="#102A43"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+    </LinearLayout>
+</ScrollView>

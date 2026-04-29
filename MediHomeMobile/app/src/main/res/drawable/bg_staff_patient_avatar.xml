@@ -1,0 +1,5 @@
+<!-- bg_staff_patient_avatar.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#06A6D8" />
+    <corners android:radius="16dp" />
+</shape>

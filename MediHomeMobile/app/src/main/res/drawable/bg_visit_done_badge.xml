@@ -1,0 +1,5 @@
+<!-- bg_visit_done_badge.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#00E0B8" />
+    <corners android:radius="20dp" />
+</shape>

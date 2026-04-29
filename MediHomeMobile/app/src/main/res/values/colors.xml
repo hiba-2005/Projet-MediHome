@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary_dark">#355872</color>
+    <color name="primary_mid">#7AAACE</color>
+    <color name="primary_light">#9CD5FF</color>
+    <color name="background_soft">#F7F8F0</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <color name="text_dark">#1F2933</color>
+    <color name="text_muted">#6B7280</color>
+    <color name="success_green">#22A06B</color>
+    <color name="card_border">#D9E2EC</color>
+    <color name="login_primary">#355872</color>
+    <color name="primary">#2196F3</color>   <!-- Bleu Material Design -->
+
+</resources>

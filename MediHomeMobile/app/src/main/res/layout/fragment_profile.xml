@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F8F0"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:background="@drawable/bg_profile_gradient">
+
+            <TextView
+                android:id="@+id/tvProfileInitials"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/bg_profile_avatar"
+                android:gravity="center"
+                android:text="NP"
+                android:textColor="#FFFFFF"
+                android:textSize="34sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/btnChangePhoto"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_toEndOf="@id/tvProfileInitials"
+                android:layout_alignBottom="@id/tvProfileInitials"
+                android:layout_marginStart="-20dp"
+                android:background="@drawable/bg_profile_icon_circle"
+                android:padding="6dp"
+                android:src="@android:drawable/ic_menu_edit"
+                android:tint="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/tvProfileFullName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvProfileInitials"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="12dp"
+                android:text="Nom Patient"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvProfileEmailTop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvProfileFullName"
+                android:layout_centerHorizontal="true"
+                android:text="email@exemple.com"
+                android:textColor="#EAF4FF"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="-45dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/bg_profile_white_card"
+            android:elevation="8dp"
+            android:orientation="vertical"
+            android:padding="22dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="PROFIL PATIENT"
+                android:textColor="#355872"
+                android:textSize="21sp"
+                android:textStyle="bold" />
+
+            <TextView style="@style/ProfileLabel" android:text="Prénom" />
+            <LinearLayout style="@style/ProfileInputBox">
+                <TextView style="@style/ProfileIcon" android:text="👤" />
+                <EditText
+                    android:id="@+id/etProfilePrenom"
+                    style="@style/ProfileEditText"
+                    android:hint="Entrer le prénom" />
+            </LinearLayout>
+
+            <TextView style="@style/ProfileLabel" android:text="Nom" />
+            <LinearLayout style="@style/ProfileInputBox">
+                <TextView style="@style/ProfileIcon" android:text="🪪" />
+                <EditText
+                    android:id="@+id/etProfileNom"
+                    style="@style/ProfileEditText"
+                    android:hint="Entrer le nom" />
+            </LinearLayout>
+
+            <TextView style="@style/ProfileLabel" android:text="Email" />
+            <LinearLayout style="@style/ProfileInputBox">
+                <TextView style="@style/ProfileIcon" android:text="✉" />
+                <EditText
+                    android:id="@+id/etProfileEmail"
+                    style="@style/ProfileEditText"
+                    android:hint="Entrer l'email"
+                    android:inputType="textEmailAddress" />
+            </LinearLayout>
+
+            <TextView style="@style/ProfileLabel" android:text="Téléphone" />
+            <LinearLayout style="@style/ProfileInputBox">
+                <TextView style="@style/ProfileIcon" android:text="📞" />
+                <EditText
+                    android:id="@+id/etProfileTelephone"
+                    style="@style/ProfileEditText"
+                    android:hint="Entrer le téléphone"
+                    android:inputType="phone" />
+            </LinearLayout>
+
+            <TextView style="@style/ProfileLabel" android:text="Adresse" />
+            <LinearLayout style="@style/ProfileInputBoxLarge">
+                <TextView style="@style/ProfileIcon" android:text="📍" />
+                <EditText
+                    android:id="@+id/etProfileAdresse"
+                    style="@style/ProfileEditText"
+                    android:gravity="top"
+                    android:hint="Entrer l'adresse"
+                    android:inputType="textMultiLine" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Sécurité du compte"
+                android:textColor="#355872"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView style="@style/ProfileLabel" android:text="Nouveau mot de passe" />
+            <LinearLayout style="@style/ProfileInputBox">
+                <TextView style="@style/ProfileIcon" android:text="🔒" />
+                <EditText
+                    android:id="@+id/etNewPassword"
+                    style="@style/ProfileEditText"
+                    android:hint="Nouveau mot de passe"
+                    android:inputType="textPassword" />
+            </LinearLayout>
+
+            <TextView style="@style/ProfileLabel" android:text="Confirmer le mot de passe" />
+            <LinearLayout style="@style/ProfileInputBox">
+                <TextView style="@style/ProfileIcon" android:text="✅" />
+                <EditText
+                    android:id="@+id/etConfirmPassword"
+                    style="@style/ProfileEditText"
+                    android:hint="Confirmer le mot de passe"
+                    android:inputType="textPassword" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnChangePassword"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/bg_profile_button_secondary"
+                android:text="Changer mot de passe"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnSaveProfile"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_profile_button"
+                android:text="ENREGISTRER"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnLogout"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_logout_button"
+                android:text="Se déconnecter"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
