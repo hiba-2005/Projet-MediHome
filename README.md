@@ -47,7 +47,7 @@ Architecture du projet :
 
 - Digitaliser la gestion des visites
 - Planifier les interventions médicales
-- Suivre les visites en temps réel
+- Suivre les visites
 - Faciliter la communication
 - Générer des rapports médicaux
 
@@ -60,7 +60,6 @@ Architecture du projet :
 - Consulter ses informations
 - Voir sa visite
 - Suivre le statut
-- Voir le rapport
 
 ### 👨‍⚕️ Personnel médical
 
@@ -205,9 +204,8 @@ Cette section présente les diagrammes utilisés pour concevoir le système Medi
 
 Ce diagramme montre les interactions entre les différents acteurs du système (patient, personnel médical, administrateur) et les fonctionnalités principales.
 
-<p align="center">
-  <img src="./assets/use_case_diagram.png" width="700" alt="Diagramme de cas d'utilisation">
-</p>
+<img width="1139" height="718" alt="useCase jpg" src="https://github.com/user-attachments/assets/830646a9-ce75-4386-8899-8a8667186f23" />
+
 
 ---
 
@@ -215,9 +213,19 @@ Ce diagramme montre les interactions entre les différents acteurs du système (
 
 Ce diagramme décrit la structure du système en termes de classes, leurs attributs et les relations entre elles.
 
-<p align="center">
-  <img src="./assets/class_diagram.png" width="700" alt="Diagramme de classes">
-</p>
+<img width="994" height="813" alt="class" src="https://github.com/user-attachments/assets/989a57a5-1660-42b8-8b75-fde5648427b5" />
+
+---
+
+### Diagramme de gantt
+
+<img width="1600" height="286" alt="gaintt" src="https://github.com/user-attachments/assets/311d1aa7-33d9-47c0-98f1-80153f69403f" />
+
+
+### Architecture du système
+
+<img width="1536" height="1024" alt="architecture" src="https://github.com/user-attachments/assets/bd48ae7f-83a3-4fe6-bff5-5ba804f1a3f8" />
+
 
 ---
 
@@ -329,7 +337,6 @@ Le rapport PDF généré comprend :
 
 ## 🔮 Perspectives
 
-- Intégration des notifications en temps réel
 - Ajout de la géolocalisation du personnel médical
 - Mise en place d'un système de messagerie entre patient et personnel médical
 - Implémentation d'une authentification sécurisée avec JWT
@@ -344,7 +351,9 @@ Le rapport PDF généré comprend :
 
 **Réalisé par :**  
 Ouirouane Hiba  
-Projet de Fin de Module   
+
+Projet de Fin de Module
+
 Année universitaire : 2025–2026
 
 **Encadré par :**  
