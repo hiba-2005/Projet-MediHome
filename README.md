@@ -1,7 +1,8 @@
 # 🏥 MediHome – Plateforme de gestion des visites médicales à domicile
 
 <p align="center">
-  <img src="./assets/logo_medihome.png" alt="Logo MediHome" width="180">
+<img width="117" height="87" alt="logo_medihome" src="https://github.com/user-attachments/assets/ff82556e-f21a-4a0e-ab70-840b2818dd03" />
+
 </p>
 
 ---
