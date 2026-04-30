@@ -235,13 +235,23 @@ Ce diagramme décrit la structure du système en termes de classes, leurs attrib
 
 Une démonstration de l'interface administrateur développée avec React, incluant la gestion des patients, du personnel médical et des visites.
 
-👉 [Voir la vidéo](./assets/demo-web.mp4)
+
+
+
 
 ### Application Mobile
 
 Une démonstration de l'application Android utilisée par le patient et le personnel médical pour consulter les visites et ajouter des rapports.
 
-👉 [Voir la vidéo](./assets/demo-mobile.mp4)
+
+
+
+
+
+
+https://github.com/user-attachments/assets/5f9c2aab-7dfb-4a39-899b-fe6ad3291b60
+
+
 
 ---
 
